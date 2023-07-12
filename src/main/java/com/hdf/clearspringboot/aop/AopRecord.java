@@ -21,7 +21,7 @@ public class AopRecord {
 
     }
 
-    @Pointcut("execution(* com.hdf.clearspringboot.controller.HelloController.*()))")
+    @Pointcut("execution(* com.hdf.clearspringboot.*.*.*()))")
     public void pointcut1(){
 
     }
@@ -43,7 +43,7 @@ public class AopRecord {
         try {
             proceed = joinPoint.proceed();
             watch.stop();
-            log.info("method:{} spend : {}", methodName, watch.prettyPrint());
+            log.info("执行方法:{} 耗时 : {}", methodName + "." + joinPoint.getSignature().getName(), watch.getTotalTimeMillis());  
         } catch (Throwable e) {
             e.printStackTrace();
         }

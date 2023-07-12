@@ -16,7 +16,4 @@ public class HelloController {
         return "test";
     }
 
-    public void mm(){
-        System.out.println("qwe");
-    }
 }
