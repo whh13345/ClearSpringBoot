@@ -34,20 +34,20 @@ public class AopRecord {
        
     // }
 
-    @Around("pointcut1()")
-    public Object before(ProceedingJoinPoint joinPoint) {
-        String methodName = joinPoint.getSignature().getDeclaringTypeName();
-        StopWatch watch = new StopWatch();
-        watch.start("watch1");
-        Object proceed = null;
-        try {
-            proceed = joinPoint.proceed();
-            watch.stop();
-            log.info("执行方法:{} 耗时 : {}", methodName + "." + joinPoint.getSignature().getName(), watch.getTotalTimeMillis());  
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-        return proceed;
-    }
+//    @Around("pointcut1()")
+//    public Object before(ProceedingJoinPoint joinPoint) {
+//        String methodName = joinPoint.getSignature().getDeclaringTypeName();
+//        StopWatch watch = new StopWatch();
+//        watch.start("watch1");
+//        Object proceed = null;
+//        try {
+//            proceed = joinPoint.proceed();
+//            watch.stop();
+//            log.info("执行方法:{} 耗时 : {}", methodName + "." + joinPoint.getSignature().getName(), watch.getTotalTimeMillis());
+//        } catch (Throwable e) {
+//            e.printStackTrace();
+//        }
+//        return proceed;
+//    }
     
 }
