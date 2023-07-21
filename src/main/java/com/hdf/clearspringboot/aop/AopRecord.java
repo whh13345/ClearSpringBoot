@@ -34,6 +34,7 @@ public class AopRecord {
        
     // }
 
+    //不能代理websocket类
 //    @Around("pointcut1()")
 //    public Object before(ProceedingJoinPoint joinPoint) {
 //        String methodName = joinPoint.getSignature().getDeclaringTypeName();
