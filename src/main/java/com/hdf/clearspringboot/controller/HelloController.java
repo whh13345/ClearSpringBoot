@@ -10,7 +10,7 @@ public class HelloController {
 
     private static final Log log = LogFactory.getLog(HelloController.class);
 
-    @RequestMapping("/")
+    @RequestMapping("/",method = RequestMethod.GET)
     public String hello() {
         log.info("123");
         return "hello world";
